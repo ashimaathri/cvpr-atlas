@@ -41,6 +41,34 @@ Fetch abstracts:
 ./scripts/get_abstracts.py
 ```
 
+## Data
+
+Generated datasets are saved as CSV files.
+
+Current columns may include:
+* title
+* authors
+* abstract
+* paper_url
+* pdf_url
+
+The data is designed to be easy to load into:
+* pandas
+* DuckDB
+* SQLite
+* notebooks
+* embedding pipelines
+* visualization tools
+
+Example:
+
+```python
+import pandas as pd
+
+df = pd.read_csv("cvpr_2026_papers.csv")
+print(df.head())
+```
+
 ## Goals
 
 The goal of this project is to make CVPR research more accessible and easier to explore programmatically.
